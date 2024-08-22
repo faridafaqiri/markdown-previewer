@@ -69,4 +69,4 @@ You can contact me through the following:
 Inspired by freeCodeCamp.
 Thanks to the React and Markdown communities.
 
-Made with ❤️ by Farida Faqiri
+Made with ☕ by Farida Faqiri
