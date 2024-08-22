@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm'; // Ensure this import is correct
 import './App.css';
+
+// Use function declarations for components to comply with eslint rules
+function LineBreak() {
+  return <br />;
+}
 
 function App() {
   const [markdown, setMarkdown] = useState(`# Welcome to my React Markdown Previewer!
@@ -43,7 +49,11 @@ And here. | Okay. | I think we get it.
 1. And there are numbered lists too.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
-`);
+
+![Alt text](https://via.placeholder.com/150 "Optional title")
+
+This is a line break example.  
+Here is another line after a break.`);
 
   return (
     <div className="app">
@@ -61,7 +71,12 @@ And here. | Okay. | I think we get it.
       </nav>
 
       <div id="preview">
-        <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]} // Use remark-gfm plugin
+          components={{ br: LineBreak }} // Use the LineBreak component
+        >
+          {markdown}
+        </ReactMarkdown>
       </div>
     </div>
   );
