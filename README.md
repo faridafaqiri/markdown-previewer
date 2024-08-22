@@ -45,7 +45,7 @@ Check out the live demo [here](./Capture.JPG).
 
 ## 🌐 Live Demo
 
-Check out the live demo ().
+Check out the live demo (https://resilient-stardust-bef300.netlify.app).
 
 ## 🤝 Contributing
 
